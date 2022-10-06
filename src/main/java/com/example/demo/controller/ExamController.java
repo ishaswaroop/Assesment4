@@ -29,7 +29,10 @@ public class ExamController {
 	public List<Exam> getExam() {
           return examservices.getExam();
 	}
-	
+	@GetMapping("/viewexam/{name}")
+	public List<Exam> getExam1(@PathVariable String name) {
+        return examservices.findByName(name);
+	}
 	
 	@PostMapping("/")
 	public void addExam(@RequestBody Exam ex) {

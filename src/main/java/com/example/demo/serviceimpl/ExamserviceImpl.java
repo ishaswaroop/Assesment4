@@ -1,6 +1,7 @@
 package com.example.demo.serviceimpl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -40,6 +41,14 @@ public class ExamserviceImpl implements ExamServices{
 		// TODO Auto-generated method stub
 		exrepo.deleteById(id);
 	}
+
+	@Override
+	public List<Exam> findByName(@PathVariable String name) {
+		// TODO Auto-generated method stub
+		return exrepo.findByName(name);
+	}
+
+	
 
 	
 	

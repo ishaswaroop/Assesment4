@@ -21,6 +21,9 @@ public List<Exam> getExam();
 	public void deleteExam(long id);
 
 
+	public List<Exam> findByName(String name);
+
+
 	
 
 

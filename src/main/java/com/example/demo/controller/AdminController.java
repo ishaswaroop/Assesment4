@@ -27,6 +27,7 @@ public class AdminController {
 	public List<Admin> getAdmin() {
           return adminservices.getAdmin();
 	}
+	
 
 	@PostMapping("/")
 	public void addAdmin(@RequestBody Admin adm) {
